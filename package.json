@@ -1,0 +1,40 @@
+{
+  "name": "opencode-redstone",
+  "version": "1.0.0",
+  "description": "Redstone : an Opencode agent that simplifies Minecraft plugin development and deployment.",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "redstone": "./dist/index.js"
+  },
+  "files": [
+    "dist",
+    "template"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "start": "ts-node src/index.ts",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "redstone",
+    "opencode",
+    "agent",
+    "minecraft",
+    "plugin"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "prompts": "^2.4.2"
+  },
+  "devDependencies": {
+    "@types/node": "^25.0.8",
+    "@types/prompts": "^2.4.9",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
