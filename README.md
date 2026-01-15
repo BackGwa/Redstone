@@ -53,6 +53,7 @@ Redstone consists of the following specialized agents:
 
 ## Contributing
 Thank you for contributing to Redstone!
+For contribution guidelines and branch naming conventions, please refer to [CONTRIBUTING.md](./CONTRIBUTING.md).
 
 ![Contributors](https://contrib.rocks/image?repo=BackGwa/Redstone)
 
