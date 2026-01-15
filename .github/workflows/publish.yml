@@ -25,10 +25,3 @@ jobs:
       - run: npm run build
 
       - run: npm publish
-
-      - name: Create Release
-        uses: softprops/action-gh-release@v1
-        with:
-          generate_release_notes: true
-          draft: false
-          prerelease: false
