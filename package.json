@@ -2,6 +2,10 @@
   "name": "opencode-redstone",
   "version": "1.0.1",
   "description": "Redstone : an Opencode agent that simplifies Minecraft plugin development and deployment.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BackGwa/Redstone"
+  },
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "bin": {
