@@ -105,31 +105,31 @@ export async function inputManualModelIds(): Promise<{
     {
       type: 'text' as const,
       name: 'orchestrator',
-      message: 'Orchestrator Model ID (leave empty to skip):',
+      message: 'Redstone-Orchestrator\n\x1b[90mMain agent for planning, developing plugins\x1b[0m\nModel ID (leave empty to use selected model):',
       initial: ''
     },
     {
       type: 'text' as const,
       name: 'document',
-      message: 'Document Model ID (leave empty to skip):',
+      message: 'Redstone-Document\n\x1b[90mCreates and updates project documentation\x1b[0m\nModel ID (leave empty to use selected model):',
       initial: ''
     },
     {
       type: 'text' as const,
       name: 'projectInit',
-      message: 'Project Init Model ID (leave empty to skip):',
+      message: 'Redstone-ProjectInitialization\n\x1b[90mCreates and initializes plugin projects\x1b[0m\nModel ID (leave empty to use selected model):',
       initial: ''
     },
     {
       type: 'text' as const,
       name: 'explore',
-      message: 'Explore Model ID (leave empty to skip):',
+      message: 'Redstone-Explore\n\x1b[90mExplores codebases to find features\x1b[0m\nModel ID (leave empty to use selected model):',
       initial: ''
     },
     {
       type: 'text' as const,
       name: 'apiSearch',
-      message: 'API Search Model ID (leave empty to skip):',
+      message: 'Redstone-APISearch\n\x1b[90mResearches API documentation and dependencies\x1b[0m\nModel ID (leave empty to use selected model):',
       initial: ''
     }
   ];
