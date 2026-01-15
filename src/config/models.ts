@@ -13,15 +13,15 @@ export const BALANCED_MODELS: ModelConfig = {
 };
 
 export const PROFESSIONAL_CODEX_MODELS: ModelConfig = {
-  projectInit: 'model: opencode/gpt-5.1-codex-mini',
-  explore: 'model: opencode/gpt-5.1-codex-mini',
-  apiSearch: 'model: opencode/gpt-5.2-codex'
+  projectInit: 'model: openai/gpt-5.1-codex-mini',
+  explore: 'model: openai/gpt-5.1-codex-mini',
+  apiSearch: 'model: openai/gpt-5.2-codex'
 };
 
 export const PROFESSIONAL_CLAUDE_MODELS: ModelConfig = {
-  projectInit: 'model: opencode/claude-haiku-4-5',
-  explore: 'model: opencode/claude-haiku-4-5',
-  apiSearch: 'model: opencode/claude-sonnet-4-5'
+  projectInit: 'model: anthropic/claude-haiku-4-5',
+  explore: 'model: anthropic/claude-haiku-4-5',
+  apiSearch: 'model: anthropic/claude-sonnet-4-5'
 };
 
 export const TEMPLATE_FILES = [
