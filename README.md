@@ -49,10 +49,8 @@ Once the Redstone installer is launched, select “Install Redstone” and choos
 **Explore** » `openai/gpt-5.1-codex-mini`  
 **API Search** » `openai/gpt-5.2-codex`
 
-> [!NOTE]
 > It is recommended to skip the orchestrator and documentation models during the setup phase. However, internal testing has confirmed that Anthropic's Claude models[^3] demonstrate the most outstanding performance.
 
-> [!NOTE]
 > While using the same model provider is generally recommended, it can lead to rapid token consumption. If multiple model providers are available, we recommend using different providers for subordinate agents as shown in Suggested Models. Internal testing has confirmed that OpenAI's Codex model series is optimized for exploration and search tasks.
 </details>
 
