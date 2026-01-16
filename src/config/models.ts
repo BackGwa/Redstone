@@ -1,6 +1,7 @@
 export interface ModelConfig {
   orchestrator?: string;
   document?: string;
+  planner?: string;
   projectInit?: string;
   explore?: string;
   apiSearch?: string;
@@ -26,15 +27,17 @@ export const PROFESSIONAL_CLAUDE_MODELS: ModelConfig = {
 
 export const TEMPLATE_FILES = [
   'Redstone-Orchestrator.md',
+  'Redstone-Document.md',
+  'Redstone-Planner.md',
   'Redstone-ProjectInitialization.md',
   'Redstone-Explore.md',
-  'Redstone-APISearch.md',
-  'Redstone-Document.md'
+  'Redstone-APISearch.md'
 ];
 
 export const PLACEHOLDERS = {
   ORCHESTRATOR_MODEL_ID: '{ORCHESTRATOR-MODEL-ID}',
   DOCUMENT_MODEL_ID: '{DOCUMENT-MODEL-ID}',
+  PLANNER_MODEL_ID: '{PLANNER-MODEL-ID}',
   PROJECT_INIT_MODEL_ID: '{PROJECT-INIT-MODEL-ID}',
   EXPLORE_MODEL_ID: '{EXPLORE-MODEL-ID}',
   API_SEARCH_MODEL_ID: '{APISEARCH-MODEL-ID}'

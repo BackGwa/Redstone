@@ -18,6 +18,12 @@ export function replacePlaceholders(
     result = result.replace(new RegExp(`^${PLACEHOLDERS.DOCUMENT_MODEL_ID}\\s*\\n?`, 'gm'), '');
   }
 
+  if (modelConfig.planner !== undefined) {
+    result = result.replace(PLACEHOLDERS.PLANNER_MODEL_ID, modelConfig.planner);
+  } else {
+    result = result.replace(new RegExp(`^${PLACEHOLDERS.PLANNER_MODEL_ID}\\s*\\n?`, 'gm'), '');
+  }
+
   if (modelConfig.projectInit !== undefined) {
     result = result.replace(PLACEHOLDERS.PROJECT_INIT_MODEL_ID, modelConfig.projectInit);
   } else {
@@ -42,6 +48,7 @@ export function replacePlaceholders(
 export function createManualModelConfig(input: {
   orchestrator?: string;
   document?: string;
+  planner?: string;
   projectInit?: string;
   explore?: string;
   apiSearch?: string;
@@ -54,6 +61,10 @@ export function createManualModelConfig(input: {
 
   if (input.document && input.document.trim() !== '') {
     config.document = `model: ${input.document.trim()}`;
+  }
+
+  if (input.planner && input.planner.trim() !== '') {
+    config.planner = `model: ${input.planner.trim()}`;
   }
 
   if (input.projectInit && input.projectInit.trim() !== '') {

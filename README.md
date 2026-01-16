@@ -43,13 +43,14 @@ Once the Redstone installer is launched, select “Install Redstone” and choos
 <details>
 <summary>Suggested Models</summary>
 
-**Orchestrator** » *(Skip)*  
-**Document** » *(Skip)*  
-**Project Initialization** » `opencode/grok-code` || ``openai/gpt-5.1-codex-mini``  
-**Explore** » `openai/gpt-5.1-codex-mini`  
+**Orchestrator** » *(Skip)*
+**Document** » *(Skip)*
+**Planner** » *(Skip)*
+**Project Initialization** » `opencode/grok-code` || ``openai/gpt-5.1-codex-mini``
+**Explore** » `openai/gpt-5.1-codex-mini`
 **API Search** » `openai/gpt-5.2-codex`
 
-> It is recommended to skip the orchestrator and documentation models during the setup phase. However, internal testing has confirmed that Anthropic's Claude models[^3] demonstrate the most outstanding performance.
+> It is recommended to skip the orchestrator, planner, and documentation models during the setup phase. However, internal testing has confirmed that Anthropic's Claude models[^3] demonstrate the most outstanding performance.
 
 > While using the same model provider is generally recommended, it can lead to rapid token consumption. If multiple model providers are available, we recommend using different providers for subordinate agents as shown in Suggested Models. Internal testing has confirmed that OpenAI's Codex model series is optimized for exploration and search tasks.
 </details>
@@ -68,6 +69,7 @@ Redstone consists of the following specialized agents:
 |:-:|:--|
 |Redstone-Orchestrator|Planning and main plugin development agent|
 |Redstone-Document|Project documentation creation and updates|
+|Redstone-Planner|Creates and maintains implementation plans|
 |Redstone-ProjectInitialization|Plugin project creation and initialization|
 |Redstone-Explore|Codebase exploration and feature discovery|
 |Redstone-APISearch|API documentation and dependency research|
@@ -88,5 +90,5 @@ This project is distributed under the MIT License. See the [LICENSE](./LICENSE) 
 <br>
 
 [^1]: The ProjectInitialization, Explore, and APISearch agents use separate models that are different from the orchestrator.
-[^2]: The Document agent inherits its model from the Orchestrator.
+[^2]: The Document and Planner agents inherit their model from the Orchestrator.
 [^3]: Among Claude models, most tasks can be successfully completed with Sonnet 4.5. However, if you need to work with larger codebases and require deeper understanding, consider using Opus 4.5. Since this model has higher usage costs, it is recommended to alternate between Sonnet 4.5 and Opus 4.5.

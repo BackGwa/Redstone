@@ -97,6 +97,7 @@ export async function selectProfessionalModel(): Promise<ProfessionalModel | nul
 export async function inputManualModelIds(): Promise<{
   orchestrator: string;
   document: string;
+  planner: string;
   projectInit: string;
   explore: string;
   apiSearch: string;
@@ -112,6 +113,12 @@ export async function inputManualModelIds(): Promise<{
       type: 'text' as const,
       name: 'document',
       message: 'Redstone-Document\n\x1b[90mCreates and updates project documentation\x1b[0m\nModel ID (leave empty to use selected model):',
+      initial: ''
+    },
+    {
+      type: 'text' as const,
+      name: 'planner',
+      message: 'Redstone-Planner\n\x1b[90mCreates and maintains implementation plans\x1b[0m\nModel ID (leave empty to use selected model):',
       initial: ''
     },
     {
@@ -143,6 +150,7 @@ export async function inputManualModelIds(): Promise<{
   return {
     orchestrator: response.orchestrator || '',
     document: response.document || '',
+    planner: response.planner || '',
     projectInit: response.projectInit || '',
     explore: response.explore || '',
     apiSearch: response.apiSearch || ''

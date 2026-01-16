@@ -7,6 +7,7 @@ import { readFile, writeFile, ensureDir } from '../utils/file';
 export interface ManualInput {
   orchestrator: string;
   document: string;
+  planner: string;
   projectInit: string;
   explore: string;
   apiSearch: string;

@@ -56,7 +56,8 @@ export function getDisplayName(fileName: string): string {
     'Redstone-ProjectInitialization.md': 'Project Initialization',
     'Redstone-Explore.md': 'Explore',
     'Redstone-APISearch.md': 'API Search',
-    'Redstone-Document.md': 'Document'
+    'Redstone-Document.md': 'Document',
+    'Redstone-Planner.md': 'Planner'
   };
 
   return nameMap[fileName] || fileName;
