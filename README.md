@@ -1,6 +1,8 @@
 <div align="center"><br>
 
-# Redstone
+![Redstone](.github/assets/logo.png)
+
+<br>
 
 Redstone is an AI agent system based on [Opencode](https://github.com/anomalyco/opencode) that automates and simplifies the entire Minecraft plugin development process.
 
