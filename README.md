@@ -45,12 +45,12 @@ Once the Redstone installer is launched, select “Install Redstone” and choos
 <details>
 <summary>Suggested Models</summary>
 
-**Orchestrator** » *(Skip)*
-**Document** » *(Skip)*
-**Planner** » *(Skip)*
-**Project Initialization** » `opencode/grok-code` || ``openai/gpt-5.1-codex-mini``
-**Explore** » `openai/gpt-5.1-codex-mini`
-**API Search** » `openai/gpt-5.2-codex`
+**Orchestrator** » *(Skip)*  
+**Document** » *(Skip)*  
+**Planner** » *(Skip)*  
+**Project Initialization** » `opencode/grok-code` || ``openai/gpt-5.1-codex-mini``  
+**Explore** » `openai/gpt-5.1-codex-mini`  
+**API Search** » `openai/gpt-5.2-codex`  
 
 > It is recommended to skip the orchestrator, planner, and documentation models during the setup phase. However, internal testing has confirmed that Anthropic's Claude models[^3] demonstrate the most outstanding performance.
 
