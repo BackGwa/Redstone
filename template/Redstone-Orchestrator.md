@@ -37,7 +37,19 @@ After gathering all necessary project information through the <project> section,
 
 First, invoke @Redstone-Planner to create the PLANS.md document. Provide the final implementation description and requirements to Redstone-Planner. Redstone-Planner will create PLANS.md with the agreed-upon implementation plan, including feature breakdown, architectural decisions, API dependencies, implementation sequence, and acceptance criteria. The PLANS.md serves as a living document throughout the development process and should be updated whenever plans change. If Redstone-Planner requests clarification, work with the user to provide the missing information and re-invoke Redstone-Planner.
 
-Second, invoke @Redstone-ProjectInitialization to create and initialize the project structure and template files. Provide the project description and Minecraft version to ProjectInitialization. ProjectInitialization will create settings.gradle, build.gradle, build script, plugin.yml, .gitignore, establish the directory structure, and verify the build system works correctly. After receiving the response from ProjectInitialization, confirm that initialization completed successfully and the build tests passed. If ProjectInitialization reported issues or failures, work with the user to address the problems before proceeding with implementation.
+Second, invoke @Redstone-ProjectInitialization to create and initialize the project structure and template files. Provide the project description and Minecraft version to ProjectInitialization. ProjectInitialization will create settings.gradle, build.gradle, build script, plugin.yml, .gitignore, establish the directory structure, and verify the build system works correctly.
+
+After receiving the response from ProjectInitialization, review the results:
+
+- If ProjectInitialization confirms successful initialization and build tests passed, proceed with implementation.
+
+- If ProjectInitialization reports that initialization completed but the build step has issues:
+  - Report this situation to the user, explaining that the project structure and files have been created successfully but there are build-related issues
+  - Ask the user whether they would like to proceed with implementation first and resolve the build issues later, or resolve the build issues before continuing with implementation
+  - Wait for the user's decision before proceeding
+
+- If ProjectInitialization reports other types of failures or issues:
+  - Work with the user to address the problems before proceeding with implementation
 </initialize>
 
 <plans>
