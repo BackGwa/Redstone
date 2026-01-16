@@ -40,6 +40,22 @@ Once the Redstone installer is launched, select “Install Redstone” and choos
 - You can specify individual model IDs for each agent
 - Use when custom models or fine-grained control is needed
 
+<details>
+<summary>Suggested Models</summary>
+
+**Orchestrator** » *(Skip)*  
+**Document** » *(Skip)*  
+**Project Initialization** » `opencode/grok-code` || ``openai/gpt-5.1-codex-mini``  
+**Explore** » `openai/gpt-5.1-codex-mini`  
+**API Search** » `openai/gpt-5.2-codex`
+
+> [!NOTE]
+> It is recommended to skip the orchestrator and documentation models during the setup phase. However, internal testing has confirmed that Anthropic's Claude models[^3] demonstrate the most outstanding performance.
+
+> [!NOTE]
+> While using the same model provider is generally recommended, it can lead to rapid token consumption. If multiple model providers are available, we recommend using different providers for subordinate agents as shown in Suggested Models. Internal testing has confirmed that OpenAI's Codex model series is optimized for exploration and search tasks.
+</details>
+
 <br>
 
 > [!TIP]
@@ -75,3 +91,4 @@ This project is distributed under the MIT License. See the [LICENSE](./LICENSE) 
 
 [^1]: The ProjectInitialization, Explore, and APISearch agents use separate models that are different from the orchestrator.
 [^2]: The Document agent inherits its model from the Orchestrator.
+[^3]: Among Claude models, most tasks can be successfully completed with Sonnet 4.5. However, if you need to work with larger codebases and require deeper understanding, consider using Opus 4.5. Since this model has higher usage costs, it is recommended to alternate between Sonnet 4.5 and Opus 4.5.
