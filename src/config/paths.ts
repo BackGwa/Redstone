@@ -12,7 +12,7 @@ export function getConfigDir(): string {
 }
 
 export function getTemplateDir(): string {
-  return path.join(__dirname, '../../template');
+  return path.join(__dirname, '../../agents');
 }
 
 export function resolvePath(...segments: string[]): string {
