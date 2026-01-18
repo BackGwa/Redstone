@@ -243,7 +243,7 @@ Automatically determines:
       .describe("Plugin name in kebab-case (e.g., 'my-awesome-plugin')"),
     group: tool.schema
       .string()
-      .describe("Maven group ID (e.g., 'dev.example')"),
+      .describe("Maven group ID (e.g., 'dev.redstone')"),
     plugin_version: tool.schema
       .string()
       .describe("Plugin version in semantic format (e.g., '1.0.0')"),
@@ -253,10 +253,10 @@ Automatically determines:
     author: tool.schema.string().describe("Plugin author name"),
     namespace: tool.schema
       .string()
-      .describe("Main class namespace (e.g., 'dev.example.MyPlugin')"),
+      .describe("Main class namespace (e.g., 'dev.redstone.MyPlugin')"),
     minecraft_version: tool.schema
       .string()
-      .describe("Target Minecraft version (e.g., '1.21.4')"),
+      .describe("Target Minecraft version (e.g., '1.21.10')"),
     load_phase: tool.schema
       .enum(["STARTUP", "POSTWORLD"])
       .describe("Plugin load phase: STARTUP (before world loads) or POSTWORLD (after world loads)"),
