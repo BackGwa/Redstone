@@ -1,4 +1,8 @@
-<div align="center"><br>
+<div align="center">
+
+**English** | [한국어](./README.ko.md)
+
+<br>
 
 ![Redstone](.github/assets/logo.png)
 
