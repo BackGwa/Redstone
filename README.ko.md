@@ -1,7 +1,5 @@
 <div align="center">
 
-[English](./README.md) | **한국어**
-
 <br>
 
 ![Redstone](.github/assets/logo.png)
@@ -17,6 +15,8 @@ Redstone은 [Opencode](https://github.com/anomalyco/opencode) 기반의 AI 에�
 [![GitHub Forks](https://img.shields.io/github/forks/BackGwa/Redstone)](https://github.com/BackGwa/Redstone/network/members)
 [![GitHub Stars](https://img.shields.io/github/stars/BackGwa/Redstone)](https://github.com/BackGwa/Redstone/stargazers)
 [![License](https://img.shields.io/github/license/BackGwa/Redstone)](https://github.com/BackGwa/Redstone/blob/main/LICENSE)
+
+[English](./README.md) | **한국어**
 
 <br>
 </div>
@@ -54,12 +54,12 @@ Redstone 설치 프로그램을 실행한 후, "Install Redstone"을 선택하�
 <details>
 <summary>권장 모델</summary>
 
-**Orchestrator** » *(건너뛰기)*
-**Document** » *(건너뛰기)*
-**Planner** » *(건너뛰기)*
-**Project Initialization** » `opencode/grok-code` || ``openai/gpt-5.1-codex-mini``
-**Explore** » `openai/gpt-5.1-codex-mini`
-**API Search** » `openai/gpt-5.2-codex`
+**Orchestrator** » *(건너뛰기)*  
+**Document** » *(건너뛰기)*  
+**Planner** » *(건너뛰기)*  
+**Project Initialization** » `opencode/grok-code` || ``openai/gpt-5.1-codex-mini``  
+**Explore** » `openai/gpt-5.1-codex-mini`  
+**API Search** » `openai/gpt-5.2-codex`  
 
 > 설정 단계에서는 오케스트레이터, 플래너, 문서화 모델을 건너뛰는 것이 권장됩니다. 내부 테스트 결과, Anthropic의 Claude 모델[^3]이 가장 뛰어난 성능을 보여주었습니다.
 

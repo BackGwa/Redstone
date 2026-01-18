@@ -1,7 +1,5 @@
 <div align="center">
 
-**English** | [한국어](./README.ko.md)
-
 <br>
 
 ![Redstone](.github/assets/logo.png)
@@ -17,6 +15,8 @@ Minecraft plugin development is a complex task that involves understanding compl
 [![GitHub Forks](https://img.shields.io/github/forks/BackGwa/Redstone)](https://github.com/BackGwa/Redstone/network/members)
 [![GitHub Stars](https://img.shields.io/github/stars/BackGwa/Redstone)](https://github.com/BackGwa/Redstone/stargazers)
 [![License](https://img.shields.io/github/license/BackGwa/Redstone)](https://github.com/BackGwa/Redstone/blob/main/LICENSE)
+
+**English** | [한국어](./README.ko.md)
 
 <br>
 </div>
