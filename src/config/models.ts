@@ -34,6 +34,10 @@ export const TEMPLATE_FILES = [
   'Redstone-APISearch.md'
 ];
 
+export const TOOL_FILES = [
+  'Redstone-ProjectGenerator.ts'
+];
+
 export const PLACEHOLDERS = {
   ORCHESTRATOR_MODEL_ID: '{ORCHESTRATOR-MODEL-ID}',
   DOCUMENT_MODEL_ID: '{DOCUMENT-MODEL-ID}',
