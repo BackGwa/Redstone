@@ -25,6 +25,11 @@ redstone
 > [!IMPORTANT]
 > Before installing Redstone, make sure [Opencode](https://github.com/anomalyco/opencode) is installed!
 
+> [!IMPORTANT]
+> For plugin development, you must have:
+> - JDK version matching your target Minecraft version installed
+> - Gradle for building the project
+
 Once the Redstone installer is launched, select “Install Redstone” and choose one of the following options.
 
 ### 1. Balanced Mode
