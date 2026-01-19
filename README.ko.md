@@ -57,7 +57,7 @@ Redstone 설치 프로그램을 실행한 후, "Install Redstone"을 선택하�
 **Orchestrator** » *(건너뛰기)*  
 **Document** » *(건너뛰기)*  
 **Planner** » *(건너뛰기)*  
-**Project Initialization** » `opencode/grok-code` || ``openai/gpt-5.1-codex-mini``  
+**Project Initialization** » `opencode/grok-code` || `openai/gpt-5.1-codex-mini`  
 **Explore** » `openai/gpt-5.1-codex-mini`  
 **API Search** » `openai/gpt-5.2-codex`  
 
