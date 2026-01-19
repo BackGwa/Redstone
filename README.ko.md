@@ -16,7 +16,7 @@ Redstone은 [Opencode](https://github.com/anomalyco/opencode) 기반의 AI 에�
 [![GitHub Stars](https://img.shields.io/github/stars/BackGwa/Redstone)](https://github.com/BackGwa/Redstone/stargazers)
 [![License](https://img.shields.io/github/license/BackGwa/Redstone)](https://github.com/BackGwa/Redstone/blob/main/LICENSE)
 
-[English](./README.md) | **한국어**
+[🇺🇸 English](./README.md) | **🇰🇷 한국어** | [🇯🇵 日本語](./README.ja.md)
 
 <br>
 </div>
