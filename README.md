@@ -57,7 +57,7 @@ Once the Redstone installer is launched, select “Install Redstone” and choos
 **Orchestrator** » *(Skip)*  
 **Document** » *(Skip)*  
 **Planner** » *(Skip)*  
-**Project Initialization** » `opencode/grok-code` || ``openai/gpt-5.1-codex-mini``  
+**Project Initialization** » `opencode/grok-code` || `openai/gpt-5.1-codex-mini`  
 **Explore** » `openai/gpt-5.1-codex-mini`  
 **API Search** » `openai/gpt-5.2-codex`  
 
