@@ -40,6 +40,10 @@ Redstone 설치 프로그램을 실행한 후, "Install Redstone"을 선택하�
 - 일부 하위 에이전트[^1]는 Opencode의 기본 무료 모델을 사용하고, 오케스트레이터와 그로부터 상속받는 에이전트[^2]는 사용자가 설정할 수 있습니다.
 - 이 모드는 효율적인 토큰 사용으로 합리적인 품질의 결과를 제공합니다. 단, 일부 프롬프트는 모델 학습 목적으로 사용될 수 있습니다.
 
+> [!NOTE]
+> Opencode는 더 이상 일부 모델을 무료로 제공하지 않습니다.
+> 따라서 Balanced 모드에서는 하위 에이전트가 opencode/big-pickle 모델을 사용합니다.
+
 ### 2. Professional 모드
 - 이 모드는 GPT나 Claude와 같은 독점 모델을 하위 에이전트에 사용하여, 일관성과 안정성을 포함한 높은 신뢰성이 요구되는 작업에 가장 적합합니다.
 - 오케스트레이터 모델과 그로부터 상속받는 에이전트는 여전히 사용자가 선택할 수 있습니다. 하지만, 가능하면 동일한 제공업체의 모델을 사용하는 것이 권장됩니다.
@@ -57,9 +61,9 @@ Redstone 설치 프로그램을 실행한 후, "Install Redstone"을 선택하�
 **Orchestrator** » *(건너뛰기)*  
 **Document** » *(건너뛰기)*  
 **Planner** » *(건너뛰기)*  
-**Project Initialization** » `opencode/grok-code` || `openai/gpt-5.1-codex-mini`  
+**Project Initialization** » `openai/gpt-5.1-codex-mini`  
 **Explore** » `openai/gpt-5.1-codex-mini`  
-**API Search** » `openai/gpt-5.2-codex`  
+**API Search** » `openai/gpt-5.2-codex`
 
 > 설정 단계에서는 Orchestrator, Planner, Document 모델을 건너뛰는 것이 권장됩니다. 내부 테스트 결과, Anthropic의 Claude 모델[^3]이 가장 뛰어난 성능을 보여주었습니다.
 

@@ -40,6 +40,10 @@ Redstoneインストーラーを起動したら、「Install Redstone」を選�
 - 一部のサブエージェント[^1]はOpencodeのデフォルト無料モデルを使用し、オーケストレーターおよびオーケストレーターからモデルを継承するエージェント[^2]はユーザーが設定できます。
 - このモードは、トークン消費を抑えつつ妥当な品質の結果を提供します。ただし、一部のプロンプトはモデル学習目的で利用される可能性があります。
 
+> [!NOTE]
+> Opencodeは一部のモデルを無料で提供しなくなりました。
+> その結果、Balancedモードでは、サブエージェントがopencode/big-pickleモデルを使用します。
+
 ### 2. Professionalモード
 - このモードは、GPTやClaudeなどのクローズドモデルをサブエージェントに使用するため、一貫性や安定性など高い信頼性が求められる作業に最適です。
 - オーケストレーターのモデル、およびオーケストレーターからモデルを継承するエージェントは、引き続きユーザーが選択できます。ただし、可能な限り同一プロバイダーのモデルを使用することを推奨します。
@@ -57,9 +61,9 @@ Redstoneインストーラーを起動したら、「Install Redstone」を選�
 **Orchestrator** » *(スキップ)*  
 **Document** » *(スキップ)*  
 **Planner** » *(スキップ)*  
-**Project Initialization** » `opencode/grok-code` || `openai/gpt-5.1-codex-mini`  
+**Project Initialization** » `openai/gpt-5.1-codex-mini`  
 **Explore** » `openai/gpt-5.1-codex-mini`  
-**API Search** » `openai/gpt-5.2-codex`  
+**API Search** » `openai/gpt-5.2-codex`
 
 > セットアップ段階では、オーケストレーター、プランナー、ドキュメント用モデルはスキップすることを推奨します。ただし、社内テストではAnthropicのClaudeモデル[^3]が最も優れた性能を示しました。
 
