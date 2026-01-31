@@ -8,9 +8,9 @@ export interface ModelConfig {
 }
 
 export const BALANCED_MODELS: ModelConfig = {
-  projectInit: 'model: opencode/big-pickle',
-  explore: 'model: opencode/big-pickle',
-  apiSearch: 'model: opencode/big-pickle'
+  projectInit: 'model: opencode/glm-4.7-free',
+  explore: 'model: opencode/glm-4.7-free',
+  apiSearch: 'model: opencode/kimi-k2.5-free'
 };
 
 export const PROFESSIONAL_CODEX_MODELS: ModelConfig = {

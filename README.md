@@ -40,10 +40,6 @@ Once the Redstone installer is launched, select “Install Redstone” and choos
 - Some subordinate agents[^1] use Opencode’s default free model, while the Orchestrator and agents that inherit the model from the Orchestrator[^2] can be configured by the user.
 - This mode provides results of reasonable quality with efficient token usage. However, some prompts may be used for model training purposes.
 
-> [!NOTE]
-> Opencode no longer provides some models for free.
-> As a result, in Balanced Mode, subordinate agents use the opencode/big-pickle model.
-
 ### 2. Professional Mode
 - This mode uses closed models such as GPT or Claude for subordinate agents, making it best suited for tasks that require a high level of reliability, including consistency and stability.
 - The Orchestrator model and agents that inherit the model from the Orchestrator can still be selected by the user. However, it is recommended to use models from the same provider whenever possible.

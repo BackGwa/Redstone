@@ -1,6 +1,6 @@
 {
   "name": "opencode-redstone",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Redstone : an Opencode agent that simplifies Minecraft plugin development and deployment.",
   "repository": {
     "type": "git",
