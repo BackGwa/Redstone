@@ -8,8 +8,8 @@ export interface ModelConfig {
 }
 
 export const BALANCED_MODELS: ModelConfig = {
-  projectInit: 'model: opencode/glm-4.7-free',
-  explore: 'model: opencode/glm-4.7-free',
+  projectInit: 'model: opencode/minimax-m2.1-free',
+  explore: 'model: opencode/minimax-m2.1-free',
   apiSearch: 'model: opencode/kimi-k2.5-free'
 };
 
