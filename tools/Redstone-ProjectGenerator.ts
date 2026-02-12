@@ -11,6 +11,7 @@ interface ProjectInitParams {
   namespace: string
   minecraft_version: string
   load_phase: "STARTUP" | "POSTWORLD"
+  language: "JAVA" | "KOTLIN"
 }
 
 interface GeneratedFile {
@@ -25,6 +26,7 @@ interface ProjectInitResult {
   java_version: string
   api_version: string
   paper_api_dependency: string
+  language: "JAVA" | "KOTLIN"
   error?: string
 }
 
@@ -59,6 +61,11 @@ function namespaceToPath(namespace: string): string {
 
 function generateSettingsGradle(params: ProjectInitParams): string {
   return `rootProject.name = '${params.plugin_name}'
+`
+}
+
+function generateSettingsGradleKts(params: ProjectInitParams): string {
+  return `rootProject.name = "${params.plugin_name}"
 `
 }
 
@@ -103,6 +110,51 @@ jar {
     }
 
     exclude 'META-INF/**'
+}
+`
+}
+
+function generateBuildGradleKts(
+  params: ProjectInitParams,
+  javaVersion: string,
+  paperApiDep: string
+): string {
+  return `plugins {
+    kotlin("jvm") version "2.1.0"
+}
+
+group = "${params.group}"
+version = "${params.plugin_version}"
+
+repositories {
+    mavenCentral()
+    maven {
+        url = uri("https://repo.papermc.io/repository/maven-public/")
+    }
+}
+
+dependencies {
+    compileOnly("${paperApiDep}")
+    implementation(kotlin("stdlib"))
+}
+
+kotlin {
+    jvmToolchain(${javaVersion})
+}
+
+tasks.withType<JavaCompile> {
+    options.encoding = "UTF-8"
+}
+
+tasks.jar {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    archiveClassifier.set("")
+
+    from {
+        configurations.runtimeClasspath.get().map { if (it.isDirectory) it else zipTree(it) }
+    }
+
+    exclude("META-INF/**")
 }
 `
 }
@@ -163,6 +215,7 @@ function generateGitignore(): string {
 build/
 gradle/
 .gradle/
+.kotlin/
 .settings/
 
 .classpath
@@ -188,6 +241,9 @@ function validateParams(params: ProjectInitParams): string | null {
   }
   if (!["STARTUP", "POSTWORLD"].includes(params.load_phase)) {
     return "load_phase must be either 'STARTUP' or 'POSTWORLD'"
+  }
+  if (!["JAVA", "KOTLIN"].includes(params.language)) {
+    return "language must be either 'JAVA' or 'KOTLIN'"
   }
   if (!params.plugin_description || params.plugin_description.trim().length === 0) {
     return "plugin_description cannot be empty"
@@ -224,13 +280,13 @@ export default tool({
   description: `Initializes a Minecraft plugin project with all required files and directory structure.
 
 Generates:
-- settings.gradle: Project name configuration
-- build.gradle: Build configuration with Paper API dependency
+- settings.gradle / settings.gradle.kts: Project name configuration
+- build.gradle / build.gradle.kts: Build configuration with Paper API dependency
 - build.sh: Unix build script
 - build.ps1: Windows PowerShell build script
 - plugin.yml: Plugin metadata and configuration
 - .gitignore: Git ignore patterns
-- src/main/java/{namespace_path}/: Java source directory structure
+- src/main/java/{namespace_path}/ (Java) or src/main/kotlin/{namespace_path}/ (Kotlin): Source directory structure
 
 Automatically determines:
 - Java version based on Minecraft version
@@ -260,6 +316,10 @@ Automatically determines:
     load_phase: tool.schema
       .enum(["STARTUP", "POSTWORLD"])
       .describe("Plugin load phase: STARTUP (before world loads) or POSTWORLD (after world loads)"),
+    language: tool.schema
+      .enum(["JAVA", "KOTLIN"])
+      .optional()
+      .describe("Programming language for the project: JAVA (default) or KOTLIN"),
   },
 
   async execute(args) {
@@ -272,6 +332,7 @@ Automatically determines:
       namespace: args.namespace,
       minecraft_version: args.minecraft_version,
       load_phase: args.load_phase as "STARTUP" | "POSTWORLD",
+      language: (args.language as "JAVA" | "KOTLIN") ?? "JAVA",
     }
 
     const validationError = validateParams(params)
@@ -283,6 +344,7 @@ Automatically determines:
         java_version: "",
         api_version: "",
         paper_api_dependency: "",
+        language: params.language,
         error: validationError,
       }
       return JSON.stringify(errorResult, null, 2)
@@ -293,10 +355,19 @@ Automatically determines:
     const paperApiDependency = getPaperApiDependency(params.minecraft_version)
     const namespacePath = namespaceToPath(params.namespace)
     const projectRoot = process.cwd()
+    const isKotlin = params.language === "KOTLIN"
 
     const files: GeneratedFile[] = [
-      { path: "settings.gradle", content: generateSettingsGradle(params) },
-      { path: "build.gradle", content: generateBuildGradle(params, javaVersion, paperApiDependency) },
+      {
+        path: isKotlin ? "settings.gradle.kts" : "settings.gradle",
+        content: isKotlin ? generateSettingsGradleKts(params) : generateSettingsGradle(params),
+      },
+      {
+        path: isKotlin ? "build.gradle.kts" : "build.gradle",
+        content: isKotlin
+          ? generateBuildGradleKts(params, javaVersion, paperApiDependency)
+          : generateBuildGradle(params, javaVersion, paperApiDependency),
+      },
       { path: "build.sh", content: generateBuildSh(params) },
       { path: "build.ps1", content: generateBuildPs1(params) },
       { path: "src/main/resources/plugin.yml", content: generatePluginYml(params, apiVersion) },
@@ -305,9 +376,10 @@ Automatically determines:
 
     try {
       const createdFiles = await writeProjectFiles(projectRoot, files)
-      const javaSourceDir = path.join(projectRoot, "src/main/java", namespacePath)
-      await ensureDir(javaSourceDir)
-      createdFiles.push(`src/main/java/${namespacePath}/`)
+      const sourceDir = isKotlin ? "src/main/kotlin" : "src/main/java"
+      const sourceRoot = path.join(projectRoot, sourceDir, namespacePath)
+      await ensureDir(sourceRoot)
+      createdFiles.push(`${sourceDir}/${namespacePath}/`)
 
       const result: ProjectInitResult = {
         success: true,
@@ -316,6 +388,7 @@ Automatically determines:
         java_version: javaVersion,
         api_version: apiVersion,
         paper_api_dependency: paperApiDependency,
+        language: params.language,
       }
       return JSON.stringify(result, null, 2)
     } catch (error) {
@@ -326,6 +399,7 @@ Automatically determines:
         java_version: javaVersion,
         api_version: apiVersion,
         paper_api_dependency: paperApiDependency,
+        language: params.language,
         error: error instanceof Error ? error.message : String(error),
       }
       return JSON.stringify(errorResult, null, 2)

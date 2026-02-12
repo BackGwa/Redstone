@@ -34,6 +34,10 @@ redstone
 > - 대상 마인크래프트 버전과 일치하는 JDK
 > - 프로젝트 빌드를 위한 Gradle
 
+> [!IMPORTANT]
+> 개발 언어로 **Kotlin**을 선택하는 경우, 추가로 다음이 필요합니다:
+> - Kotlin 설치 (Kotlin Gradle 플러그인이 컴파일을 담당하지만, Kotlin이 설치되어 있어야 합니다)
+
 Redstone 설치 프로그램을 실행한 후, "Install Redstone"을 선택하고 다음 옵션 중 하나를 선택하세요.
 
 ### 1. Balanced 모드
@@ -59,7 +63,7 @@ Redstone 설치 프로그램을 실행한 후, "Install Redstone"을 선택하�
 **Planner** » *(건너뛰기)*  
 **Project Initialization** » `openai/gpt-5.1-codex-mini`  
 **Explore** » `openai/gpt-5.1-codex-mini`  
-**API Search** » `openai/gpt-5.2-codex`
+**API Search** » `openai/gpt-5.3-codex`  
 
 > 설정 단계에서는 Orchestrator, Planner, Document 모델을 건너뛰는 것이 권장됩니다. 내부 테스트 결과, Anthropic의 Claude 모델[^3]이 가장 뛰어난 성능을 보여주었습니다.
 

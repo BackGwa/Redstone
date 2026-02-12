@@ -34,6 +34,10 @@ redstone
 > - 対象Minecraftバージョンに合ったJDKのインストール
 > - プロジェクトをビルドするためのGradle
 
+> [!IMPORTANT]
+> 開発言語として **Kotlin** を選択する場合、さらに以下が必要です:
+> - Kotlinのインストール（KotlinのGradleプラグインがコンパイルを担当しますが、Kotlinがインストールされている必要があります）
+
 Redstoneインストーラーを起動したら、「Install Redstone」を選択し、次のオプションのいずれかを選んでください。
 
 ### 1. Balancedモード
@@ -59,7 +63,7 @@ Redstoneインストーラーを起動したら、「Install Redstone」を選�
 **Planner** » *(スキップ)*  
 **Project Initialization** » `openai/gpt-5.1-codex-mini`  
 **Explore** » `openai/gpt-5.1-codex-mini`  
-**API Search** » `openai/gpt-5.2-codex`
+**API Search** » `openai/gpt-5.3-codex`  
 
 > セットアップ段階では、オーケストレーター、プランナー、ドキュメント用モデルはスキップすることを推奨します。ただし、社内テストではAnthropicのClaudeモデル[^3]が最も優れた性能を示しました。
 

@@ -34,6 +34,10 @@ redstone
 > - JDK version matching your target Minecraft version installed
 > - Gradle for building the project
 
+> [!IMPORTANT]
+> If you choose **Kotlin** as your development language, you must also have:
+> - Kotlin installed (the Kotlin Gradle plugin will handle compilation, but a working Kotlin installation is required)
+
 Once the Redstone installer is launched, select “Install Redstone” and choose one of the following options.
 
 ### 1. Balanced Mode
@@ -59,7 +63,7 @@ Once the Redstone installer is launched, select “Install Redstone” and choos
 **Planner** » *(Skip)*  
 **Project Initialization** » `openai/gpt-5.1-codex-mini`  
 **Explore** » `openai/gpt-5.1-codex-mini`  
-**API Search** » `openai/gpt-5.2-codex`  
+**API Search** » `openai/gpt-5.3-codex`  
 
 > It is recommended to skip the orchestrator, planner, and documentation models during the setup phase. However, internal testing has confirmed that Anthropic's Claude models[^3] demonstrate the most outstanding performance.
 
