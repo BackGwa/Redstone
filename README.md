@@ -109,4 +109,4 @@ This project is distributed under the MIT License. See the [LICENSE](./LICENSE) 
 
 [^1]: The ProjectInitialization, Explore, and APISearch agents use separate models that are different from the orchestrator.
 [^2]: The Document and Planner agents inherit their model from the Orchestrator.
-[^3]: Among Claude models, most tasks can be successfully completed with Sonnet 4.5. However, if you need to work with larger codebases and require deeper understanding, consider using Opus 4.6. Since this model has higher usage costs, it is recommended to alternate between Sonnet 4.5 and Opus 4.6.
+[^3]: Among Claude models, most tasks can be successfully completed with Sonnet 4.6. However, if you need to work with larger codebases and require deeper understanding, consider using Opus 4.6. Since this model has higher usage costs, it is recommended to alternate between Sonnet 4.6 and Opus 4.6.
