@@ -150,9 +150,7 @@ tasks.jar {
     duplicatesStrategy = DuplicatesStrategy.EXCLUDE
     archiveClassifier.set("")
 
-    from {
-        configurations.runtimeClasspath.get().map { if (it.isDirectory) it else zipTree(it) }
-    }
+    from(configurations.runtimeClasspath.get().map { if (it.isDirectory) it else zipTree(it) })
 
     exclude("META-INF/**")
 }
