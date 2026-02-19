@@ -8,8 +8,8 @@ export interface ModelConfig {
 }
 
 export const BALANCED_MODELS: ModelConfig = {
-  projectInit: 'model: opencode/minimax-m2.1-free',
-  explore: 'model: opencode/minimax-m2.1-free',
+  projectInit: 'model: opencode/minimax-m2.5-free',
+  explore: 'model: opencode/minimax-m2.5-free',
   apiSearch: 'model: opencode/kimi-k2.5-free'
 };
 
@@ -22,7 +22,7 @@ export const PROFESSIONAL_CODEX_MODELS: ModelConfig = {
 export const PROFESSIONAL_CLAUDE_MODELS: ModelConfig = {
   projectInit: 'model: anthropic/claude-haiku-4-5',
   explore: 'model: anthropic/claude-haiku-4-5',
-  apiSearch: 'model: anthropic/claude-sonnet-4-5'
+  apiSearch: 'model: anthropic/claude-sonnet-4-6'
 };
 
 export const TEMPLATE_FILES = [
