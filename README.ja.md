@@ -63,7 +63,7 @@ Redstoneインストーラーを起動したら、「Install Redstone」を選�
 **Planner** » *(スキップ)*  
 **Project Initialization** » `openai/gpt-5.1-codex-mini`  
 **Explore** » `openai/gpt-5.1-codex-mini`  
-**API Search** » `openai/gpt-5.3-codex`  
+**API Search** » `openai/gpt-5.4`  
 
 > セットアップ段階では、オーケストレーター、プランナー、ドキュメント用モデルはスキップすることを推奨します。ただし、社内テストではAnthropicのClaudeモデル[^3]が最も優れた性能を示しました。
 
