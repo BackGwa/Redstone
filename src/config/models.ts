@@ -14,8 +14,8 @@ export const BALANCED_MODELS: ModelConfig = {
 };
 
 export const PROFESSIONAL_CODEX_MODELS: ModelConfig = {
-  projectInit: 'model: openai/gpt-5.1-codex-mini',
-  explore: 'model: openai/gpt-5.1-codex-mini',
+  projectInit: 'model: openai/gpt-5.4-mini',
+  explore: 'model: openai/gpt-5.4-mini',
   apiSearch: 'model: openai/gpt-5.4'
 };
 

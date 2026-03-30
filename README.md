@@ -61,8 +61,8 @@ Once the Redstone installer is launched, select “Install Redstone” and choos
 **Orchestrator** » *(Skip)*  
 **Document** » *(Skip)*  
 **Planner** » *(Skip)*  
-**Project Initialization** » `openai/gpt-5.1-codex-mini`  
-**Explore** » `openai/gpt-5.1-codex-mini`  
+**Project Initialization** » `openai/gpt-5.4-mini`  
+**Explore** » `openai/gpt-5.4-mini`  
 **API Search** » `openai/gpt-5.4`  
 
 > It is recommended to skip the orchestrator, planner, and documentation models during the setup phase. However, internal testing has confirmed that Anthropic's Claude models[^3] demonstrate the most outstanding performance.
