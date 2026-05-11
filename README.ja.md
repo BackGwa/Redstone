@@ -63,7 +63,7 @@ Redstoneインストーラーを起動したら、「Install Redstone」を選�
 **Planner** » *(スキップ)*  
 **Project Initialization** » `openai/gpt-5.4-mini`  
 **Explore** » `openai/gpt-5.4-mini`  
-**API Search** » `openai/gpt-5.4`  
+**API Search** » `openai/gpt-5.5`  
 
 > セットアップ段階では、オーケストレーター、プランナー、ドキュメント用モデルはスキップすることを推奨します。ただし、社内テストではAnthropicのClaudeモデル[^3]が最も優れた性能を示しました。
 
@@ -109,4 +109,4 @@ Redstoneへのコントリビュートありがとうございます。
 
 [^1]: ProjectInitialization、Explore、APISearchエージェントは、オーケストレーターとは別のモデルを使用します。
 [^2]: DocumentとPlannerエージェントは、オーケストレーターからモデルを継承します。
-[^3]: Claudeモデルの中では、多くのタスクをSonnet 4.6で成功させることができます。ただし、より大きなコードベースを扱い、より深い理解が必要な場合はOpus 4.6の使用を検討してください。このモデルは利用コストが高いため、Sonnet 4.6とOpus 4.6を交互に使うことを推奨します。
+[^3]: Claudeモデルの中では、多くのタスクをSonnet 4.6で成功させることができます。ただし、より大きなコードベースを扱い、より深い理解が必要な場合はOpus 4.7の使用を検討してください。このモデルは利用コストが高いため、Sonnet 4.6とOpus 4.7を交互に使うことを推奨します。
