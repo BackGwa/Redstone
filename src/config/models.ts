@@ -10,13 +10,13 @@ export interface ModelConfig {
 export const BALANCED_MODELS: ModelConfig = {
   projectInit: 'model: opencode/minimax-m2.5-free',
   explore: 'model: opencode/minimax-m2.5-free',
-  apiSearch: 'model: opencode/kimi-k2.5-free'
+  apiSearch: 'model: opencode/minimax-m2.5-free'
 };
 
 export const PROFESSIONAL_CODEX_MODELS: ModelConfig = {
   projectInit: 'model: openai/gpt-5.4-mini',
   explore: 'model: openai/gpt-5.4-mini',
-  apiSearch: 'model: openai/gpt-5.4'
+  apiSearch: 'model: openai/gpt-5.5'
 };
 
 export const PROFESSIONAL_CLAUDE_MODELS: ModelConfig = {
