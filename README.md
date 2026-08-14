@@ -1,3 +1,5 @@
+
+
 <div align="center">
 
 <br>
@@ -27,7 +29,7 @@ npm install -g opencode-redstone
 redstone
 ```
 > [!IMPORTANT]
-> Before installing Redstone, make sure [Opencode](https://github.com/anomalyco/opencode) is installed!
+> Before installing Redstone, make sure [Opencode](https://github.com/anomalyco/opencode) and **Node.js >= 18.0.0** are installed!
 
 > [!IMPORTANT]
 > For plugin development, you must have:
